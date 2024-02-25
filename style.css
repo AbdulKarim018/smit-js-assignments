@@ -1,0 +1,7 @@
+#navbarCheckbox {
+  display: none;
+}
+
+#navbarCheckbox:checked ~ #mobileNavbar {
+  display: block;
+}
