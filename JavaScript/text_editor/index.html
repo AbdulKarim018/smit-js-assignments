@@ -21,21 +21,22 @@
     <div class="container max-w-6xl w-full mx-auto flex flex-col gap-10">
       <div class="flex items-baseline justify-center gap-2 p-4">
         <h1 class="text-3xl font-bold">Text Editor</h1>
-        <a
-          class="text-sky-500 underline font-semibold text-base"
+        <!-- <a
+          class="text-teal-500 underline font-semibold text-base"
           href="https://github.com/abdulkarim018"
           >by Abdul Karim</a
-        >
+        > -->
       </div>
+
       <div class="flex flex-wrap justify-between">
-        <div class="border border-white md:w-1/2 flex flex-wrap gap-4">
+        <div class="border border-white md:w-1/2 flex flex-wrap gap-4 relative">
           <div class="flex flex-col gap-3 p-4">
             <h3 class="text-xl font-semibold">Styles</h3>
             <label class="inline-flex items-center me-5 cursor-pointer">
               <input
                 type="checkbox"
                 value=""
-                class="sr-only peer"
+                class="sr-only peer interactive_element"
                 id="bold_toggle"
               />
               <div
@@ -47,7 +48,7 @@
               <input
                 type="checkbox"
                 value=""
-                class="sr-only peer"
+                class="sr-only peer interactive_element"
                 id="italic_toggle"
               />
               <div
@@ -61,11 +62,11 @@
                 type="radio"
                 value=""
                 name="line_radio"
-                class="w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
+                class="interactive_element w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
               />
               <label
                 for="underline-radio"
-                class="ms-2 font-medium text-gray-300"
+                class="ms-2 font-medium text-gray-300 cursor-pointer"
                 >Underline</label
               >
             </div>
@@ -75,11 +76,11 @@
                 type="radio"
                 value=""
                 name="line_radio"
-                class="w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
+                class="interactive_element w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
               />
               <label
                 for="linethrough-radio"
-                class="ms-2 font-medium text-gray-300"
+                class="ms-2 font-medium text-gray-300 cursor-pointer"
                 >Line Through</label
               >
             </div>
@@ -93,9 +94,11 @@
                 value=""
                 name="align-radio"
                 onclick="updateAlignment('left')"
-                class="w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
+                class="interactive_element w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
               />
-              <label for="align-radio-1" class="ms-2 font-medium text-gray-300"
+              <label
+                for="align-radio-1"
+                class="ms-2 font-medium text-gray-300 cursor-pointer"
                 >Left</label
               >
             </div>
@@ -106,9 +109,11 @@
                 value=""
                 name="align-radio"
                 onclick="updateAlignment('center')"
-                class="w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
+                class="interactive_element w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
               />
-              <label for="align-radio-2" class="ms-2 font-medium text-gray-300"
+              <label
+                for="align-radio-2"
+                class="ms-2 font-medium text-gray-300 cursor-pointer"
                 >Center</label
               >
             </div>
@@ -119,9 +124,11 @@
                 value=""
                 name="align-radio"
                 onclick="updateAlignment('justify')"
-                class="w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
+                class="interactive_element w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
               />
-              <label for="align-radio-3" class="ms-2 font-medium text-gray-300"
+              <label
+                for="align-radio-3"
+                class="ms-2 font-medium text-gray-300 cursor-pointer"
                 >Justify</label
               >
             </div>
@@ -132,9 +139,11 @@
                 value=""
                 name="align-radio"
                 onclick="updateAlignment('right')"
-                class="w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
+                class="interactive_element w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
               />
-              <label for="align-radio-4" class="ms-2 font-medium text-gray-300"
+              <label
+                for="align-radio-4"
+                class="ms-2 font-medium text-gray-300 cursor-pointer"
                 >Right</label
               >
             </div>
@@ -148,11 +157,11 @@
                 value=""
                 name="case-radio"
                 onclick="updateCase('lowercase')"
-                class="w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
+                class="interactive_element w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
               />
               <label
                 for="lowercase-radio"
-                class="ms-2 font-medium text-gray-300"
+                class="ms-2 font-medium text-gray-300 cursor-pointer"
                 >Lower Case</label
               >
             </div>
@@ -163,11 +172,11 @@
                 value=""
                 name="case-radio"
                 onclick="updateCase('uppercase')"
-                class="w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
+                class="interactive_element w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
               />
               <label
                 for="uppercase-radio"
-                class="ms-2 font-medium text-gray-300"
+                class="ms-2 font-medium text-gray-300 cursor-pointer"
                 >Upper Case</label
               >
             </div>
@@ -178,11 +187,11 @@
                 value=""
                 name="case-radio"
                 onclick="updateCase('capitalize')"
-                class="w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
+                class="interactive_element w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
               />
               <label
                 for="titlecase-radio"
-                class="ms-2 font-medium text-gray-300"
+                class="ms-2 font-medium text-gray-300 cursor-pointer"
                 >Title Case</label
               >
             </div>
@@ -197,9 +206,11 @@
                 name="font-radio"
                 onclick="updateFont('sans')"
                 checked
-                class="w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
+                class="interactive_element w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
               />
-              <label for="font-radio-1" class="ms-2 font-medium text-gray-300"
+              <label
+                for="font-radio-1"
+                class="ms-2 font-medium text-gray-300 cursor-pointer"
                 >Sans</label
               >
             </div>
@@ -210,9 +221,11 @@
                 value=""
                 name="font-radio"
                 onclick="updateFont('poppins')"
-                class="w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
+                class="interactive_element w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
               />
-              <label for="font-radio-2" class="ms-2 font-medium text-gray-300"
+              <label
+                for="font-radio-2"
+                class="ms-2 font-medium text-gray-300 cursor-pointer"
                 >Poppins</label
               >
             </div>
@@ -223,9 +236,11 @@
                 value=""
                 name="font-radio"
                 onclick="updateFont('montserrat')"
-                class="w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
+                class="interactive_element w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
               />
-              <label for="font-radio-3" class="ms-2 font-medium text-gray-300"
+              <label
+                for="font-radio-3"
+                class="ms-2 font-medium text-gray-300 cursor-pointer"
                 >Montserrat</label
               >
             </div>
@@ -236,21 +251,73 @@
                 value=""
                 name="font-radio"
                 onclick="updateFont('roboto')"
-                class="w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
+                class="interactive_element w-4 h-4 text-green-600 bg-gray-700 border-gray-600 focus:ring-0 focus:ring-offset-0 focus:ring-offset-current focus:ring-green-600 focus:ring-opacity-50"
               />
-              <label for="font-radio-4" class="ms-2 font-medium text-gray-300"
+              <label
+                for="font-radio-4"
+                class="ms-2 font-medium text-gray-300 cursor-pointer"
                 >Roboto</label
               >
             </div>
           </div>
+          <div class="absolute bottom-0 right-0 m-2.5">
+            <button
+              type="button"
+              onclick="resetStyles()"
+              class="flex items-center gap-2 focus:outline-none text-white bg-green-500 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+            >
+              Reset Styles<svg
+                class="w-6 h-6 text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17.651 7.65a7.131 7.131 0 0 0-12.68 3.15M18.001 4v4h-4m-7.652 8.35a7.13 7.13 0 0 0 12.68-3.15M6 20v-4h4"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
         <div class="relative border border-white md:w-1/2 p-4 h-[28rem]">
           <div
-            class="absolute top-0 left-0 m-2 bg-gray-300/30 backdrop-blur-sm rounded-lg"
+            class="absolute bottom-0 left-0 m-4 bg-gray-300/30 backdrop-blur-sm rounded-lg"
           >
             <p class="p-4 text-sm font-sans">
-              Words: <span id="word_count">75</span>
+              Words: <span id="word_count">0</span>
             </p>
+          </div>
+          <div class="absolute top-0 right-0 m-2">
+            <button
+              type="button"
+              onclick="editText()"
+              class="focus:outline-none focus:ring-0 text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-2.5 py-2.5 me-8 mb-2"
+            >
+              <svg
+                class="w-6 h-6 text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z"
+                />
+              </svg>
+            </button>
           </div>
           <div class="overflow-y-scroll h-full font-sans" id="text_div">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
