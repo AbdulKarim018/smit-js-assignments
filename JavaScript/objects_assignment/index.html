@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Objects Assignment</title>
+  </head>
+  <body>
+    <h1>Objects Assignment</h1>
+    <h2>Population Analysis (Question 4)</h2>
+    <p>Enter all records one by one.</p>
+    <form
+      id="pop_form"
+      style="
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        font-size: larger;
+      "
+    >
+      <label for="name">Name</label>
+      <input required type="text" id="name" />
+      <label for="gender">Gender</label>
+      <select id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <label for="address">Address</label>
+      <input required type="text" id="address" />
+      <label for="education">Education</label>
+      <select id="education">
+        <option value="highschool">Highschool</option>
+        <option value="college">College</option>
+        <option value="university">University</option>
+      </select>
+      <label for="profession">Profession</label>
+      <select id="profession">
+        <option value="student">Student</option>
+        <option value="teacher">Teacher</option>
+        <option value="engineer">Engineer</option>
+        <option value="doctor">Doctor</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>Population List</h2>
+    <div id="population_list"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

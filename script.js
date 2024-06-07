@@ -72,6 +72,10 @@ const projects = [
     title: "Assignment #14",
     link: "/smit-js-assignments/JavaScript/assignment_14/index.html",
   },
+  {
+    title: "Objects Assignment",
+    link: "/smit-js-assignments/JavaScript/objects_assignment/index.html",
+  },
 ];
 
 function getAnchorMarkup(project) {
