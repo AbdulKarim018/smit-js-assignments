@@ -22,6 +22,6 @@ registerForm.onsubmit = function (e) {
   localStorage.setItem("user", JSON.stringify(user));
 
   setTimeout(function () {
-    location.href = "/smit-js-assignments/JavaScript/notes-app/index.html";
+    location.href = "/smit-js-assignments/JavaScript/notes_app/index.html";
   }, 1000);
 };

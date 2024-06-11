@@ -104,11 +104,11 @@ if (getIsLoggedIn()) {
   notesContainer.classList.remove("hidden");
   usernameSpan.innerHTML = getUsername();
 } else {
-  location.href = "/smit-js-assignments/JavaScript/notes-app/index.html";
+  location.href = "/smit-js-assignments/JavaScript/notes_app/index.html";
 }
 
 function logout() {
   setIsLoggedIn(false);
   usernameSpan.innerHTML = "";
-  location.href = "/smit-js-assignments/JavaScript/notes-app/index.html";
+  location.href = "/smit-js-assignments/JavaScript/notes_app/index.html";
 }

@@ -16,7 +16,7 @@ loginForm.onsubmit = function (e) {
     errorMessage.classList.add("hidden");
     localStorage.setItem("isLoggedIn", true);
     setTimeout(function () {
-      location.href = "/smit-js-assignments/JavaScript/notes-app/notes.html";
+      location.href = "/smit-js-assignments/JavaScript/notes_app/notes.html";
     }, 1000);
     return;
   }
