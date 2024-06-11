@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="synthwave">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App - Abdul Karim</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="min-h-screen">
+    <div class="container mx-auto max-w-6xl">
+      <h1 class="text-5xl font-extrabold text-center pt-4 pb-16">Notes App</h1>
+
+      <div class="flex items-center justify-center">
+        <div class="w-full max-w-sm mx-auto">
+          <div class="shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Login</h2>
+            <div id="successMessage" class="hidden alert alert-success my-6">
+              <span>Login successful! Redirecting to notes...</span>
+            </div>
+            <div id="errorMessage" class="hidden alert alert-error my-6">
+              <span>Incorrect username or password</span>
+            </div>
+            <form id="loginForm">
+              <div class="mb-4">
+                <input
+                  required
+                  name="username"
+                  class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                  id="username"
+                  type="text"
+                  placeholder="username"
+                />
+              </div>
+              <div class="mb-6">
+                <input
+                  required
+                  name="password"
+                  class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                  id="password"
+                  type="password"
+                  placeholder="******"
+                />
+              </div>
+              <div class="flex items-center justify-between">
+                <button
+                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  type="submit"
+                >
+                  Sign In
+                </button>
+                <a
+                  class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+                  href="/smit-js-assignments/JavaScript/notes_app/register.html"
+                >
+                  Create an Account
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
