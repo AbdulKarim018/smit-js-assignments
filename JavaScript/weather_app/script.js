@@ -64,12 +64,15 @@ citySelector.innerHTML += cities
 
 citySelector.addEventListener("change", (e) => {
   const selectedCity = cities.find((city) => city.name === e.target.value);
-  console.log(selectedCity);
+  // console.log(selectedCity);
+  window.selectedCity = selectedCity;
   getData(selectedCity.latitude, selectedCity.longitude, updateUI);
 });
 
 function updateUI(weatherData) {
   const { main, weather } = weatherData;
+
+  // console.log(weatherData);
 
   weatherDiv.innerHTML = `
   
@@ -77,19 +80,23 @@ function updateUI(weatherData) {
   <div class="row-span-1 text-center">
     <h2 class="flex items-center justify-center gap-2">
       <i class="fa-solid fa-location-dot"></i>
-      <p class="text-2xl font-bold">--</p>
+      <p class="text-2xl font-bold">${window.selectedCity.name}</p>
     </h2>
-    <p>${
-      days[new Date().getDay()]
-    }, ${new Date().getDate()} ${months[new Date().getMonth()]}</p>
+    <p>${days[new Date().getDay()]}, ${new Date().getDate()} ${
+    months[new Date().getMonth()]
+  }</p>
   </div>
   <div class="row-span-2 flex items-center justify-center">
-    <img src="https://openweathermap.org/img/w/02n.png" class="size-32" />
+    <img src="https://openweathermap.org/img/w/${
+      weather[0].icon
+    }.png" class="size-32" />
   </div>
   <div class="row-span-3 flex flex-col gap-5">
     <p class="text-center text-7xl">${Math.round(main.temp - 273)}&deg;</p>
     <p class="text-center text-3xl">${weather[0].main}</p>
-    <p class="text-center">Feels like ${Math.round(main.feels_like - 273)}&deg;</p>
+    <p class="text-center">Feels like ${Math.round(
+      main.feels_like - 273
+    )}&deg;</p>
   </div>
 </div>
   
