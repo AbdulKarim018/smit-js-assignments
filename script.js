@@ -80,6 +80,10 @@ const projects = [
     title: "Notes App",
     link: "/smit-js-assignments/JavaScript/notes_app/index.html",
   },
+  {
+    title: "Weather App",
+    link: "/smit-js-assignments/JavaScript/weather_app/index.html",
+  },
 ];
 
 function getAnchorMarkup(project) {
