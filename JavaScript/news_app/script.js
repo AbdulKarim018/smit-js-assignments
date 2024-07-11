@@ -47,7 +47,7 @@ async function fetchNews(query) {
 
   const response = await fetch(apiURL);
   const data = await response.json();
-  console.log("data from api: ", data);
+  // console.log("data from api: ", data);
   return data.articles;
 }
 
