@@ -88,6 +88,10 @@ const projects = [
     title: "News App",
     link: "/smit-js-assignments/JavaScript/news_app/index.html",
   },
+  {
+    title: "Firebase ToDo App",
+    link: "/smit-js-assignments/JavaScript/firebase_todo_app/index.html",
+  },
 ];
 
 function getAnchorMarkup(project) {
