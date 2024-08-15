@@ -92,6 +92,10 @@ const projects = [
     title: "Firebase ToDo App",
     link: "/smit-js-assignments/JavaScript/firebase_todo_app/index.html",
   },
+  {
+    title: "React Counter App",
+    link: "https://react-counter-abdul.vercel.app/",
+  },
 ];
 
 function getAnchorMarkup(project) {
