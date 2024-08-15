@@ -9,7 +9,7 @@ export default function ColorPicker({
   setTextColor,
 }) {
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4 items-center">
       <div className="flex gap-2">
         <div className="flex flex-col items-center gap-2 ">
           <label htmlFor="backgroundColor">Background Color</label>
@@ -35,7 +35,7 @@ export default function ColorPicker({
       </div>
       <Button
         text={
-          <p>
+          <p className="flex items-center gap-2">
             Reset <FaArrowRotateLeft />
           </p>
         }
