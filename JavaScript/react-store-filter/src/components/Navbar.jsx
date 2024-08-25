@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className="flex-1">
         <a className="btn btn-ghost text-2xl font-extrabold">TheStore</a>
       </div>
-      <div className="flex-none">
+      {/* <div className="flex-none">
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <div className="indicator">
@@ -40,7 +40,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
